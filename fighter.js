@@ -5,11 +5,10 @@ class Fighter {
 		this.baseDamage = 10;
 		this.death = false;
 	}
-
 	attack(target){
 		printMessage(`${this.name} attacks ${target.name}.`);
+		target.takeDamage(this);
 	}
-
 	takeDamage(target){
 		target.hp -= 10;
 		target.turnToAttack = true;
