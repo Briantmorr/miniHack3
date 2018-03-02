@@ -19,7 +19,7 @@ class Game {
             $('.player1 .punch, .player1 .kick').prop('disabled', true).addClass('disabled').removeClass('buttonHover');
             $('.player2 .punch, .player2 .kick').prop('disabled', false).addClass('buttonHover').removeClass('disabled');
         }else{
-            this.fighterTwo.attack(this.fighterOne);
+            this.fighterTwo.attack(this.fighterOne); // why dont i have to call this.attack
             this.playerTurn = this.fighterOne;
             $('.player2 .punch, .player2 .kick').prop('disabled', true).addClass('disabled').removeClass('buttonHover');
             $('.player1 .punch, .player1 .kick').prop('disabled', false).addClass('buttonHover').removeClass('disabled');            
@@ -35,12 +35,9 @@ class Game {
         }
     
     checkDead(target){
-        if(target.hp <= 0){
-            target.death = true;
-            target.printMessage(target.name + " concedes");
-            console.log('died');
-        } else {
-            return 'Nobody dies';
+            if( target.hp <= 0 ){
+            this.death = true;
+            target.printMessage(`${target.name} concedes.`);                       
         }
     }
 }

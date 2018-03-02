@@ -29,7 +29,7 @@ class Fighter {
 
 	takeDamage(target){
 		target.hp -= this.baseDamage;
-		target.turnToAttack = true;
+		// target.turnToAttack = true;
 	}
 	printMessage(message){
         const $div = $('<div>');
