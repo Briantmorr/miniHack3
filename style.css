@@ -1,45 +1,67 @@
+html {
+    font-size: 3vmin;
+}
+html * {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
 body{
     background-image:url("assets/fightBackground.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
-    font-size: 3vmin;
 }
 .container{
-    height:90%;
+    height:100%;
     width:100%;
-    box-sizing:border-box;
-    display:inline-block;
+    /*display:inline-block;*/
 }
+/*.main1, .main2, .main3{*/
 .container > div{
     height:90%;
-    width:33%;
+    width:32%;
     display:inline-block;
     vertical-align:top;
 }
-.player{
-    background-color: background-color: rgba(0, 0, 255, .4);
-    height:100%;
-    width:25%;
-    margin:auto;
+/*.player{
+    background-color: rgba(0, 0, 255, .4);
+    height:80%;
+    /*width:25%;*/
+/*    margin:auto;
     padding-top:8%;
+}*/
+.figtherContainer{
+    height: 80vh;
 }
+.figtherContainer.player1{
+    background-image: url(assets/fighter4.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.figtherContainer.player1{
+    background-image: url(assets/Alex_sf3_animated.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .main2{
-    background-color:grey;
+    text-align:center;
+
     padding:auto;
-    padding-top:5%;
 
 }
 .battleLog{
-    background-color:whitesmoke;
+    background-color: rgba(245, 245, 245, .6);
     border: 10px ridge darkblue;
-    width: 60%;
-    height: 80%;
+    width: 70%;
+    height: 85%;
     margin:auto;
 
 }
 .hpBar{
+    height: 10%;
     width: 30%;
     background-color:green;
     border: solid black 3px;
@@ -49,12 +71,13 @@ body{
 height:480px;
 }
 .buttonContainer{
+    height: 10%;   
     width:80%;
     margin:auto;
 }
-.fighterContainer{
+/*.fighterContainer{
     margin-top:30%;
-}
+}*/
 .button {
   width: 45%;
   font-size: 1rem;
