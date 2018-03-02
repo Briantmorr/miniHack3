@@ -14,10 +14,17 @@
 </head>
 <body>
 <div class="container">
-    <div class="main1 player player1">
-        <div class="hpBar player1">
-        hp bar
+    <div class="healthBars">
+        <div class="hpOuterPlayer1">
+            <div class="hpInnerPlayer1"></div>
         </div>
+        <img src="assets/versus.png">
+        <div class="hpOuterPlayer2">
+            <div class="hpInnerPlayer2"></div>
+        </div>
+    </div>
+
+    <div class="main1 player player1">
        <div class="player1 fighter1 fighterContainer">
            <!-- <img src="assets/fighter4.gif"> -->
        </div>
@@ -34,9 +41,6 @@
         </div>
     </div>
     <div class="main3 player player2">
-        <div class="player2 hpBar">
-        hp bar
-        </div>
         <div class="player2 fighter2 fighterContainer">
             <!-- <img src="assets/Alex_sf3_animated.gif"> -->
         </div>
@@ -45,6 +49,8 @@
             <button class="player2 kick button">kick</button>
         </div>
     </div>
+
+
 </div>
 </body>
 </html>
