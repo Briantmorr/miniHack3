@@ -15,13 +15,13 @@ class Game {
         if(this.playerTurn === this.fighterOne){
             this.fighterOne.attack(this.fighterTwo);
             this.playerTurn = this.fighterTwo;
-            $('.player1 .punch, .player1 .kick').prop('disabled', true);
-            $('.player2 .punch, .player2 .kick').prop('disabled', false);
+            $('.player1 .punch, .player1 .kick').prop('disabled', true).addClass('disabled').removeClass('buttonHover');
+            $('.player2 .punch, .player2 .kick').prop('disabled', false).addClass('button:hover').removeClass('disabled');
         }else{
             this.fighterTwo.attack(this.fighterOne);
             this.playerTurn = this.fighterOne;
-            $('.player2 .punch, .player2 .kick').prop('disabled', true);
-            $('.player1 .punch, .player1 .kick').prop('disabled', false);            
+            $('.player2 .punch, .player2 .kick').prop('disabled', true).addClass('disabled').removeClass('buttonHover');
+            $('.player1 .punch, .player1 .kick').prop('disabled', false).addClass('button:hover').removeClass('disabled');            
         }
     }
 

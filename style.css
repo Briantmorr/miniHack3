@@ -85,7 +85,7 @@ height:480px;
   text-align: center;
 }
 
-.button:hover {
+.buttonHover:hover {
    opacity: 1;   
    background-color: rgb(5,190,30);
    /*Reflection*/
@@ -94,5 +94,9 @@ height:480px;
    /*Glow*/
   -webkit-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
   -moz-box-shadow: 0px 0px 100px rgba(5,173,30,0.9);
-  box-shadow: 0px 0px 50px rgba(5,173,30,0.9);
+  box-shadow: 0px 0px 50px rgba(142, 160, 145, 0.9);
+}
+
+.disabled {
+    background-color: gray;
 }
