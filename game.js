@@ -19,7 +19,7 @@ class Game {
             $('.player1 .punch, .player1 .kick').prop('disabled', true).addClass('disabled').removeClass('buttonHover');
             $('.player2 .punch, .player2 .kick').prop('disabled', false).addClass('buttonHover').removeClass('disabled');
         }else{
-            this.fighterTwo.attack(this.fighterOne);
+            this.fighterTwo.attack(this.fighterOne, this.attack);
             this.playerTurn = this.fighterOne;
             $('.player2 .punch, .player2 .kick').prop('disabled', true).addClass('disabled').removeClass('buttonHover');
             $('.player1 .punch, .player1 .kick').prop('disabled', false).addClass('buttonHover').removeClass('disabled');            
@@ -27,8 +27,6 @@ class Game {
     }
 
     playerAttack(kickOrPunch){
-        // target.hp -= attacker.move.baseDamage;
-        //     checkDead();
         this.attack = kickOrPunch;
         this.checkDead(this.playerTurn);
         this.changePlayerTurn();
