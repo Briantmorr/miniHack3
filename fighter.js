@@ -32,12 +32,8 @@ class Fighter {
 
 	takeDamage(target){
 		target.hp -= this.baseDamage;
-<<<<<<< HEAD
-		// target.turnToAttack = true;
-=======
 		target.turnToAttack = true;
 		this.updateHealthBar(target, this.baseDamage);
->>>>>>> 59a4c81b716d4f5be6c5a66f5f6c199801f3fad9
 	}
 	printMessage(message){
         const $div = $('<div>');
