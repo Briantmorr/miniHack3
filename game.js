@@ -2,7 +2,7 @@ class Game {
     constructor(p1, p2){
         this.fighterOne = p1 || 'Jessica';
         this.fighterTwo = p2 || 'Jennifer';
-        this.playerTurn = true;
+        this.playerTurn = p1;
     }
 
     //push attack messages to the attack log
@@ -12,18 +12,19 @@ class Game {
 
     //check which player it is by checking if true or false
     changePlayerTurn(){
-        if(this.playerTurn === true){
-            this.fighterOne.target.attack;
-            this.playerTurn = false;
+        if(this.playerTurn === this.fighterOne){
+            this.fighterOne.attack(this.fighterTwo);
+            this.playerTurn = this.fighterTwo;
         }else{
-            this.fighterTwo.target.attack
-            this.playerTurn = true;
+            this.fighterTwo.attack(this.fighterOne);
+            this.playerTurn = this.fighterTwo;
         }
     }
 
-    playerAttack(attacker, target, move){
-        target.hp -= attacker.move.baseDamage;
-            checkDead();
+    playerAttack(kickOrPunch){
+        // target.hp -= attacker.move.baseDamage;
+        //     checkDead();
+        this.changePlayerTurn();
         }
     
     checkDead(target){
