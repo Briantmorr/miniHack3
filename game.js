@@ -15,9 +15,13 @@ class Game {
         if(this.playerTurn === this.fighterOne){
             this.fighterOne.attack(this.fighterTwo);
             this.playerTurn = this.fighterTwo;
+            $('.player1 .punch, .player1 .kick').prop('disabled', true);
+            $('.player2 .punch, .player2 .kick').prop('disabled', false);
         }else{
             this.fighterTwo.attack(this.fighterOne);
-            this.playerTurn = this.fighterTwo;
+            this.playerTurn = this.fighterOne;
+            $('.player2 .punch, .player2 .kick').prop('disabled', true);
+            $('.player1 .punch, .player1 .kick').prop('disabled', false);            
         }
     }
 
@@ -28,10 +32,12 @@ class Game {
         }
     
     checkDead(target){
-        if(target.hp < 0){
+        if(target.hp <= 0){
             target.death = true;
-            target.printMessage(this.target + "has lost!")
-        } 
+            target.printMessage("I concede");
+        } else {
+            return 'Nobody dies';
+        }
     }
 }
 
