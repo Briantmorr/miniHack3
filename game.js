@@ -6,11 +6,6 @@ class Game {
         this.attack = 'someAttack';
     }
 
-    //push attack messages to the attack log
-    // postMessages(message){
-        
-    // }
-
     //check which player it is by checking if true or false
     changePlayerTurn(){
         if(this.playerTurn === this.fighterOne){

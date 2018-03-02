@@ -24,8 +24,8 @@ class Fighter {
 			}
 		}
         this.printMessage(` took ${this.baseDamage} damage from ${target.name}.`);
-			this.printMessage(` ${kickOrPunch}s ${target.name}.`);
-			target.takeDamage(this);
+		this.printMessage(` ${kickOrPunch}s ${target.name}.`);
+		target.takeDamage(this);
 	}
 
 
