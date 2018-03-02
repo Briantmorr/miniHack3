@@ -2,14 +2,21 @@ class Game {
     constructor(p1, p2){
         this.fighterOne = p1 || 'Jessica';
         this.fighterTwo = p2 || 'Jennifer';
+        this.playerTurn = true;
     }
 
+    //push attack messages to the attack log
     postMessages(message){
-
+        
     }
 
+    //check which player it is by checking if true or false
     changePlayerTurn(){
-
+        if(this.playerTurn === true){
+            p1.target.attack
+        }else{
+            p2.target.attack
+        }
     }
 
     playerAttack(attacker, target, move){
