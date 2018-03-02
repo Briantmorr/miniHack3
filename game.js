@@ -1,6 +1,7 @@
 class Game {
     constructor(p1, p2){
-        
+        this.fighterOne = p1 || 'Jessica';
+        this.fighterTwo = p2 || 'Jennifer';
     }
 
     postMessages(message){
@@ -11,11 +12,14 @@ class Game {
 
     }
 
-    playerAttack(){
-        if(check if dead){
+    playerAttack(target, attack){
+        player1.hp -= player2.attack.damage;
+        if(checkDead){
 
         }
-        checkDead function 
+        checkDead(target, damage){
+
+        }
     }
 
 }
