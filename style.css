@@ -29,11 +29,13 @@ div.healthBars{
     justify-content: space-between
 }
 div.hpOuterPlayer1, div.hpOuterPlayer2{
-    border:1px black solid;
+    border:2px black solid;
     margin:0 3%;
     height:80%;
     width:25%;
     align-self:center;
+    border-radius:10%;
+    overflow:hidden;
 }
 div.healthBars>img{
     height: 200%;
@@ -45,6 +47,7 @@ div.hpInnerPlayer1, div.hpInnerPlayer2{
     background-color:green;
     height:100%;
     width:100%;
+
 }
 
 .player{
@@ -55,6 +58,7 @@ div.hpInnerPlayer1, div.hpInnerPlayer2{
     padding-top:8%;
 }
 .main2{
+    margin-top:5%;
     text-align:center;
 
     padding:auto;
