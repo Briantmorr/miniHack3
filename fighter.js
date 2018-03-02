@@ -20,8 +20,8 @@ class Fighter {
 				player1.baseDamage = 9;
 			}
 		}
-			
-			this.printMessage(`${this.name} attacks ${target.name}.`);
+        this.printMessage(` took ${this.baseDamage} damage from ${target.name}.`);
+			this.printMessage(` ${kickOrPunch}s ${target.name}.`);
 			target.takeDamage(this);
 	}
 
@@ -30,7 +30,6 @@ class Fighter {
 	takeDamage(target){
 		target.hp -= this.baseDamage;
 		target.turnToAttack = true;
-		this.printMessage(`${this.name} took ${this.baseDamage} damage from ${target.name}.`);
 	}
 	printMessage(message){
         const $div = $('<div>');
@@ -43,6 +42,6 @@ class Fighter {
             class: 'message'
         });
         $div.append($name, $msg);
-        $('.battleLog').append($div);
+        $('.battleLog').prepend($div);
     }
 }

@@ -70,6 +70,7 @@ div.hpInnerPlayer1, div.hpInnerPlayer2{
     width: 70%;
     height: 85%;
     margin:auto;
+    overflow:scroll;
 
 }
 .fighter2 > img{
@@ -108,4 +109,7 @@ height:480px;
 }
 .hpOuterPlayer1, .hpOuterPlayer2{
     
+}
+.battleLog div:nth-child(1), .battleLog div:nth-child(2){
+    color:red;
 }
