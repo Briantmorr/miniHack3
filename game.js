@@ -30,13 +30,14 @@ class Game {
         // target.hp -= attacker.move.baseDamage;
         //     checkDead();
         this.attack = kickOrPunch;
+        this.checkDead(this.playerTurn);
         this.changePlayerTurn();
         }
     
     checkDead(target){
         if(target.hp <= 0){
             target.death = true;
-            target.printMessage("I concede");
+            target.printMessage(target.name + " concedes");
         } else {
             return 'Nobody dies';
         }
