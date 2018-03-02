@@ -33,12 +33,9 @@ class Game {
         }
     
     checkDead(target){
-        if(target.hp <= 0){
-            target.death = true;
-            target.printMessage(target.name + " concedes");
-            console.log('died');
-        } else {
-            return 'Nobody dies';
+            if( target.hp <= 0 ){
+            this.death = true;
+            target.printMessage(`${target.name} concedes.`);                       
         }
     }
 }
