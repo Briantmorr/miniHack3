@@ -7,7 +7,7 @@ class Figher {
 		this.turnToAttack = false;
 	}
 
-	punch(target){
+	attack(target){
 		console.log(`${this.name} attacks ${target.name}.`);
 	}
 
