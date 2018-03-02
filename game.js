@@ -17,12 +17,12 @@ class Game {
             this.fighterOne.attack(this.fighterTwo, this.attack);
             this.playerTurn = this.fighterTwo;
             $('.player1 .punch, .player1 .kick').prop('disabled', true).addClass('disabled').removeClass('buttonHover');
-            $('.player2 .punch, .player2 .kick').prop('disabled', false).addClass('button:hover').removeClass('disabled');
+            $('.player2 .punch, .player2 .kick').prop('disabled', false).addClass('buttonHover').removeClass('disabled');
         }else{
             this.fighterTwo.attack(this.fighterOne);
             this.playerTurn = this.fighterOne;
             $('.player2 .punch, .player2 .kick').prop('disabled', true).addClass('disabled').removeClass('buttonHover');
-            $('.player1 .punch, .player1 .kick').prop('disabled', false).addClass('button:hover').removeClass('disabled');            
+            $('.player1 .punch, .player1 .kick').prop('disabled', false).addClass('buttonHover').removeClass('disabled');            
         }
     }
 
@@ -30,13 +30,15 @@ class Game {
         // target.hp -= attacker.move.baseDamage;
         //     checkDead();
         this.attack = kickOrPunch;
+        this.checkDead(this.playerTurn);
         this.changePlayerTurn();
         }
     
     checkDead(target){
         if(target.hp <= 0){
             target.death = true;
-            target.printMessage("I concede");
+            target.printMessage(target.name + " concedes");
+            console.log('died');
         } else {
             return 'Nobody dies';
         }
