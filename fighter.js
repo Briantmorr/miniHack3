@@ -6,13 +6,29 @@ class Fighter {
 		this.death = false;
 	}
 
-	attack(target){
-		this.printMessage(`${this.name} attacks ${target.name}.`);
-		target.takeDamage(this);
+	attack(target, kickOrPunch){
+		if(target === player1){
+			if(kickOrPunch === 'punch'){
+				player2.baseDamage = 7;
+			}else{
+				player2.baseDamage = 9;
+			}
+		}else if(target === player2){
+			if(kickOrPunch === 'punch'){
+				player1.baseDamage = 7;
+			}else{
+				player1.baseDamage = 9;
+			}
+		}
+			
+			this.printMessage(`${this.name} attacks ${target.name}.`);
+			target.takeDamage(this);
 	}
 
+
+
 	takeDamage(target){
-		target.hp -= 10;
+		target.hp -= this.baseDamage;
 		target.turnToAttack = true;
 		this.printMessage(`${this.name} took ${this.baseDamage} damage from ${target.name}.`);
 	}
