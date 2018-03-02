@@ -5,8 +5,7 @@ body{
     width: 100vw;
     height: 100vh;
     font-size: 3vmin;
-    min-width:100vw;
-    min-height:100vh;
+    overflow:hidden;
 }
 .container{
     height:90%;
@@ -21,6 +20,7 @@ body{
     vertical-align:top;
 }
 div.healthBars{
+    margin-top:1%;
     background-color:yellow;
     height:8%;
     width:100%;
@@ -37,6 +37,8 @@ div.hpOuterPlayer1, div.hpOuterPlayer2{
 }
 div.healthBars>img{
     height: 200%;
+    margin-top:1.5%;
+    align-self:center;
 }
 
 div.hpInnerPlayer1, div.hpInnerPlayer2{
