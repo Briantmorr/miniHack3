@@ -4,7 +4,6 @@ class Fighter {
 		this.hp = hp || 100;
 		this.baseDamage = 10;
 		this.death = false;
-		this.turnToAttack = false;
 	}
 
 	attack(target){
