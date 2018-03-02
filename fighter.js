@@ -1,9 +1,12 @@
 class Fighter {
-	constructor(fighterName, hp) {
+	constructor(fighterName, hp, playerNumber) {
 		this.name = fighterName || 'fighter';
-		this.hp = hp || 100;
+		this.hp = hp || 50;
 		this.baseDamage = 10;
 		this.death = false;
+		this.playerNumber = playerNumber || 1;
+        this.currentWidth = parseFloat($('.hpInnerPlayer' + this.playerNumber).css('width'));
+        this.widthPerHp = this.currentWidth / this.hp;
 	}
 
 	attack(target, kickOrPunch){
@@ -29,7 +32,12 @@ class Fighter {
 
 	takeDamage(target){
 		target.hp -= this.baseDamage;
+<<<<<<< HEAD
 		// target.turnToAttack = true;
+=======
+		target.turnToAttack = true;
+		this.updateHealthBar(target, this.baseDamage);
+>>>>>>> 59a4c81b716d4f5be6c5a66f5f6c199801f3fad9
 	}
 	printMessage(message){
         const $div = $('<div>');
@@ -44,4 +52,8 @@ class Fighter {
         $div.append($name, $msg);
         $('.battleLog').prepend($div);
     }
+    updateHealthBar(target, attack){
+		target.currentWidth -= target.widthPerHp * attack;
+         $('.hpInnerPlayer' + this.playerNumber).css('width', target.currentWidth + 'px');
+	}
 }
