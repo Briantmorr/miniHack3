@@ -1,4 +1,4 @@
-class Figher {
+class Fighter {
 	constructor(fighterName, hp) {
 		this.name = fighterName || 'fighter';
 		this.hp = hp || 100;

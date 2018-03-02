@@ -12,14 +12,15 @@ class Game {
 
     }
 
-    playerAttack(target, attack){
-        player1.hp -= player2.attack.damage;
-        if(checkDead){
-
+    playerAttack(attacker, target, move){
+        target.hp -= attacker.move.baseDamage;
+            checkDead();
         }
-        checkDead(target, damage){
-
+    
+    checkDead(target){
+        if(target < 0){
+            target.death = true;
         }
     }
-
 }
+
