@@ -1,3 +1,44 @@
 body{
     background-image:url("assets/fightBackground.jpg");
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    height:100%;
+    width:100%;
+    box-sizing:border-box;
+    display:inline-block;
+}
+.container > div{
+    height:100%;
+    width:33%;
+    display:inline-block;
+    vertical-align:top;
+}
+.player{
+    background-color: background-color: rgba(0, 0, 255, .4);
+    height:100%;
+    width:25%;
+    margin:auto;
+    padding-top:8%;
+}
+.main2{
+    background-color:grey;
+    padding:auto;
+    padding-top:5%;
+
+}
+.battleLog{
+    background-color:whitesmoke;
+    border: 10px ridge darkblue;
+    width: 60%;
+    height: 80%;
+    margin:auto;
+
+}
+.hpBar{
+    width: 30%;
+    background-color:green;
+    border: solid black 3px;
+    margin:auto;
 }
