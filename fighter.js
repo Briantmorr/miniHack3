@@ -16,4 +16,17 @@ class Figher {
 		target.turnToAttack = true;
 		console.log(`${this.name} took ${this.baseDamage} damage from ${target.name}.`);
 	}
+	printMessage(message){
+        const $div = $('<div>');
+        const $name = $('<span>', {
+            text: this.name + ": ",
+            class: 'truck-name'
+        });
+        const $msg = $('<span>', {
+            text: message,
+            class: 'message'
+        });
+        $div.append($name, $msg);
+        $('#root').append($div);
+    }
 }
