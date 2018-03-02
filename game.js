@@ -3,6 +3,7 @@ class Game {
         this.fighterOne = p1 || 'Jessica';
         this.fighterTwo = p2 || 'Jennifer';
         this.playerTurn = p1;
+        this.attack = 'someAttack';
     }
 
     //push attack messages to the attack log
@@ -13,7 +14,7 @@ class Game {
     //check which player it is by checking if true or false
     changePlayerTurn(){
         if(this.playerTurn === this.fighterOne){
-            this.fighterOne.attack(this.fighterTwo);
+            this.fighterOne.attack(this.fighterTwo, this.attack);
             this.playerTurn = this.fighterTwo;
             $('.player1 .punch, .player1 .kick').prop('disabled', true).addClass('disabled').removeClass('buttonHover');
             $('.player2 .punch, .player2 .kick').prop('disabled', false).addClass('button:hover').removeClass('disabled');
@@ -28,6 +29,7 @@ class Game {
     playerAttack(kickOrPunch){
         // target.hp -= attacker.move.baseDamage;
         //     checkDead();
+        this.attack = kickOrPunch;
         this.changePlayerTurn();
         }
     
