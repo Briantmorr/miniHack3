@@ -11,7 +11,9 @@ class Game {
     //check which player it is by checking if true or false
     changePlayerTurn(){
         if(this.playerTurn === true){
-            
+            p1.target.attack
+        }else{
+            p2.target.attack
         }
     }
 
