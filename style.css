@@ -25,16 +25,16 @@ body{
     padding-top:8%;
 }
 .main2{
-    background-color:grey;
+    text-align:center;
+
     padding:auto;
-    padding-top:5%;
 
 }
 .battleLog{
-    background-color:whitesmoke;
+    background-color: rgba(245, 245, 245, .6);
     border: 10px ridge darkblue;
-    width: 60%;
-    height: 80%;
+    width: 70%;
+    height: 85%;
     margin:auto;
 
 }
