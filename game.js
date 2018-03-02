@@ -27,7 +27,8 @@ class Game {
     checkDead(target){
         if(target < 0){
             target.death = true;
-        }
+            target.printMessage(this.target + "has lost!")
+        } 
     }
 }
 
