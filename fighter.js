@@ -7,13 +7,14 @@ class Fighter {
 	}
 
 	attack(target){
-		printMessage(`${this.name} attacks ${target.name}.`);
+		this.printMessage(`${this.name} attacks ${target.name}.`);
+		target.takeDamage(this);
 	}
 
 	takeDamage(target){
 		target.hp -= 10;
 		target.turnToAttack = true;
-		printMessage(`${this.name} took ${this.baseDamage} damage from ${target.name}.`);
+		this.printMessage(`${this.name} took ${this.baseDamage} damage from ${target.name}.`);
 	}
 	printMessage(message){
         const $div = $('<div>');
