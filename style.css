@@ -1,16 +1,18 @@
 body{
     background-image:url("assets/fightBackground.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
 }
 .container{
-    height:100%;
+    height:90%;
     width:100%;
     box-sizing:border-box;
     display:inline-block;
 }
 .container > div{
-    height:100%;
+    height:90%;
     width:33%;
     display:inline-block;
     vertical-align:top;
@@ -41,4 +43,14 @@ body{
     background-color:green;
     border: solid black 3px;
     margin:auto;
+}
+.fighter2 > img{
+height:480px;
+}
+.buttonContainer{
+    width:30%;
+    margin:auto;
+}
+.fighterContainer{
+    margin-top:30%;
 }
