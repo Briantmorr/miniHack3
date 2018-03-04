@@ -25,20 +25,18 @@ class Fighter {
 		}
         this.printMessage.call(target,` took ${this.baseDamage} damage from ${this.name}.`);
 		this.printMessage(` ${kickOrPunch}s ${target.name}.`);
-		target.takeDamage(this);
+		target.takeDamage(this.baseDamage);
 	}
 
-
-
-	takeDamage(target){
-		target.hp -= this.baseDamage;
-		target.turnToAttack = true;
-		this.updateHealthBar(target, this.baseDamage);
+	takeDamage(damage){
+		this.hp -= damage;
+		this.turnToAttack = true;
+		this.updateHealthBar(damage);
 	}
 	printMessage(message){
         const $div = $('<div>');
         const $name = $('<span>', {
-            text: this.name + ": ",
+            text: this.name,
             class: 'fighter-name'
         });
         const $msg = $('<span>', {
@@ -48,8 +46,8 @@ class Fighter {
         $div.append($name, $msg);
         $('.battleLog').prepend($div);
     }
-    updateHealthBar(target, attack){
-		target.currentWidth -= target.widthPerHp * attack;
-         $('.hpInnerPlayer' + this.playerNumber).css('width', target.currentWidth + 'px');
+    updateHealthBar( attack){
+		this.currentWidth -= this.widthPerHp * attack;
+         $('.hpInnerPlayer' + this.playerNumber).css('width', this.currentWidth + 'px');
 	}
 }

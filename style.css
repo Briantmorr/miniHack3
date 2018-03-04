@@ -124,3 +124,28 @@ div.hpInnerPlayer1, div.hpInnerPlayer2{
     color:red;
 }
 
+.modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba( 255, 255, 255, 0.8);
+}
+
+body.won .modal{
+  display: block;
+  overflow: hidden;
+}
+
+.msg {
+  font-size: 8vmin;
+  font-family: Arial, sans-serif;
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
