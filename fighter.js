@@ -34,7 +34,9 @@ class Fighter {
 		this.updateHealthBar(damage);
 	}
 	printMessage(message){
-        const $div = $('<div>');
+        const $div = $('<div>', {
+        	class: 'turn'
+        });
         const $name = $('<span>', {
             text: this.name,
             class: 'fighter-name'
