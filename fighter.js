@@ -23,7 +23,7 @@ class Fighter {
 				player1.baseDamage = 9;
 			}
 		}
-        this.printMessage(` took ${this.baseDamage} damage from ${target.name}.`);
+        this.printMessage.call(target,` took ${this.baseDamage} damage from ${this.name}.`);
 		this.printMessage(` ${kickOrPunch}s ${target.name}.`);
 		target.takeDamage(this);
 	}
